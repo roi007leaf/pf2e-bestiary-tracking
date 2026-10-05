@@ -1,108 +1,110 @@
 {
-  "id": "pf2e-bestiary-tracking",
-  "title": "PF2E Bestiary Tracking",
-  "description": "A module to track known information about enemies for players in a bestiary.",
-  "version": "1.3.10",
-  "authors": [
-    {
-      "name": "HarryBoy",
-      "flags": {}
-    }
-  ],
-  "compatibility": {
-    "minimum": 13,
-    "verified": "14.368",
-    "maximum": 14
-  },
-  "relationships": {
-    "systems": [
-      {
-        "id": "pf2e",
-        "type": "system",
-        "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/master/system.json",
-        "compatibility": {
-          "minimum": "7.1.0",
-          "verified": "8.5.1"
+    "id": "pf2e-bestiary-tracking",
+    "title": "PF2E Bestiary Tracking",
+    "description": "A module to track known information about enemies for players in a bestiary.",
+    "version": "1.3.11",
+    "authors": [
+        {
+            "name": "HarryBoy",
+            "flags": {}
         }
-      },
-      {
-        "id": "sf2e",
-        "type": "system",
-        "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/refs/heads/v13-dev/system.sf2e.json",
-        "compatibility": {
-          "minimum": "1.0.0",
-          "verified": "1.5.1"
-        }
-      }
     ],
-    "requires": [
-      {
-        "id": "pf2e-subsystem-theming",
-        "type": "module",
-        "manifest": "https://github.com/WBHarry/pf2e-subsystem-theming/releases/latest/download/module.json",
-        "compatibility": {
-          "verified": "0.9.2"
-        }
-      }
-    ]
-  },
-  "flags": {
-    "pf2e-bestiary-tracking": {
-      "pf2e-homebrew": {
-        "creatureTraits": {
-          "npc": "PF2EBestiary.Miscellaneous.NPC"
-        }
-      }
-    }
-  },
-  "documentTypes": {
-    "JournalEntryPage": {
-      "creature": {},
-      "npc": {},
-      "hazard": {}
-    }
-  },
-  "packs": [
-    {
-      "name": "pf2e-bestiary-tracking-macros",
-      "label": "Bestiary Tracking Macros",
-      "path": "packs/pf2e-bestiary-tracking",
-      "type": "Macro",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    }
-  ],
-  "esmodules": ["BestiaryTracking.js"],
-  "styles": [
-    {
-      "src": "styles/pf2e-bestiary-tracking.css"
-    }
-  ],
-  "socket": true,
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json",
-      "flags": {}
+    "compatibility": {
+        "minimum": 13,
+        "verified": "14.368",
+        "maximum": 14
     },
-    {
-      "lang": "fr",
-      "name": "French",
-      "path": "lang/fr.json",
-      "flags": {}
+    "relationships": {
+        "systems": [
+            {
+                "id": "pf2e",
+                "type": "system",
+                "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/master/system.json",
+                "compatibility": {
+                    "minimum": "7.1.0",
+                    "verified": "8.5.1"
+                }
+            },
+            {
+                "id": "sf2e",
+                "type": "system",
+                "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/refs/heads/v13-dev/system.sf2e.json",
+                "compatibility": {
+                    "minimum": "1.0.0",
+                    "verified": "1.5.1"
+                }
+            }
+        ],
+        "requires": [
+            {
+                "id": "pf2e-subsystem-theming",
+                "type": "module",
+                "manifest": "https://github.com/WBHarry/pf2e-subsystem-theming/releases/latest/download/module.json",
+                "compatibility": {
+                    "verified": "0.9.2"
+                }
+            }
+        ]
     },
-    {
-      "lang": "pl",
-      "name": "Polish",
-      "path": "lang/pl.json",
-      "flags": {}
-    }
-  ],
-  "url": "https://github.com/WBHarry/pf2e-bestiary-tracking",
-  "manifest": "https://github.com/WBHarry/pf2e-bestiary-tracking/releases/latest/download/module.json",
-  "download": "https://github.com/WBHarry/pf2e-bestiary-tracking/releases/download/1.3.9/module.zip"
+    "flags": {
+        "pf2e-bestiary-tracking": {
+            "pf2e-homebrew": {
+                "creatureTraits": {
+                    "npc": "PF2EBestiary.Miscellaneous.NPC"
+                }
+            }
+        }
+    },
+    "documentTypes": {
+        "JournalEntryPage": {
+            "creature": {},
+            "npc": {},
+            "hazard": {}
+        }
+    },
+    "packs": [
+        {
+            "name": "pf2e-bestiary-tracking-macros",
+            "label": "Bestiary Tracking Macros",
+            "path": "packs/pf2e-bestiary-tracking",
+            "type": "Macro",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        }
+    ],
+    "esmodules": [
+        "BestiaryTracking.js"
+    ],
+    "styles": [
+        {
+            "src": "styles/pf2e-bestiary-tracking.css"
+        }
+    ],
+    "socket": true,
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json",
+            "flags": {}
+        },
+        {
+            "lang": "fr",
+            "name": "French",
+            "path": "lang/fr.json",
+            "flags": {}
+        },
+        {
+            "lang": "pl",
+            "name": "Polish",
+            "path": "lang/pl.json",
+            "flags": {}
+        }
+    ],
+    "url": "https://github.com/roi007leaf/pf2e-bestiary-tracking",
+    "manifest": "https://github.com/roi007leaf/pf2e-bestiary-tracking/releases/latest/download/module.json",
+    "download": "https://github.com/roi007leaf/pf2e-bestiary-tracking/releases/download/1.3.11/module.zip"
 }
